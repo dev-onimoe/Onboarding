@@ -15,29 +15,55 @@
         android:orientation="vertical">
 
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:background="@drawable/btn_background"
-            android:fontFamily="@font/poppins_semibold"
-            android:hint="Username"
-            android:textColor="#000000"
-            android:gravity="center"
-            android:textSize="12dp"
-            android:textColorHint="#BFBCBC"/>
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.AppCompat.Light"
+            style="@style/MyTextInputLayout"
+            app:hintEnabled="false"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/login_username_et"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/btn_background"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="#000000"
+                android:inputType="textPersonName"
+                android:gravity="center"
+                android:hint="Username or email"
+                android:textCursorDrawable="@null"
+                android:textSize="12dp"
+                android:textColorHint="#BFBCBC"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:background="@drawable/btn_background"
-            android:fontFamily="@font/poppins_semibold"
-            android:layout_marginTop="20dp"
-            android:hint="Password"
-            android:textColor="#000000"
-            android:gravity="center"
-            android:textSize="12dp"
-            android:textColorHint="#BFBCBC"/>
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.AppCompat.Light"
+            style="@style/MyTextInputLayout"
+            app:passwordToggleEnabled="true"
+            app:hintEnabled="false"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/login_password_et"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/btn_background"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="#000000"
+                android:inputType="textPassword"
+                android:drawableStart="@drawable/ic_password_space"
+                android:gravity="center"
+                android:hint="Password"
+                android:textCursorDrawable="@null"
+                android:textSize="12dp"
+                android:textColorHint="#BFBCBC"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -47,11 +73,12 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/loginpage_signin"
             android:layout_width="120dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/btn_background"
-            android:fontFamily="@font/poppins_light"
+            android:fontFamily="@font/poppins_semibold"
             android:text="Sign in"
             android:textAllCaps="false"
             android:textColor="#000000"
@@ -76,13 +103,14 @@
                 android:textColor="#000000" />
 
             <Button
+                android:id="@+id/login_signupbtn"
                 android:layout_width="120dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/btn_back2"
-                android:fontFamily="@font/poppins_light"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="Sign up"
                 android:textAllCaps="false"
                 android:textColor="#ffffff"

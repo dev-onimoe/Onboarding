@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101D23"
+    tools:context=".Login_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainll"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center_horizontal"
+                android:text="Already have an account ?"
+                android:textSize="12dp"
+                android:textColor="#ffffff"/>
+
+            <Button
+                android:id="@+id/signup_signin_link"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_background"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Sign in"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/layout_back"
+                android:weightSum="2"
+                android:orientation="vertical">
+
+                <ViewFlipper
+                    android:id="@+id/welcome_vf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_light"
+                            android:gravity="center_horizontal"
+                            android:text="Your full name is needed to identify you\nwhen delieveries are made"
+                            android:textSize="12dp"
+                            android:textColor="#000000"/>
+
+                       <com.google.android.material.textfield.TextInputLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:theme="@style/Theme.AppCompat.Light"
+                           style="@style/MyTextInputLayout"
+                           app:hintEnabled="false"
+                           android:layout_marginTop="20dp">
+
+                           <com.google.android.material.textfield.TextInputEditText
+                               android:id="@+id/signup_fname"
+                               android:layout_width="match_parent"
+                               android:layout_height="45dp"
+                               android:background="@drawable/btn_back2"
+                               android:fontFamily="@font/poppins_semibold"
+                               android:textColor="#ffffff"
+                               android:gravity="center"
+                               android:inputType="textPersonName"
+                               android:hint="First Name"
+                               android:textCursorDrawable="@null"
+                               android:textSize="12dp"
+                               android:textColorHint="#BFBCBC"/>
+                       </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/Theme.AppCompat.Light"
+                            style="@style/MyTextInputLayout"
+                            app:hintEnabled="false"
+                            android:layout_marginTop="20dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/signup_lname"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:background="@drawable/btn_back2"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textColor="#ffffff"
+                                android:gravity="center"
+                                android:inputType="textPersonName"
+                                android:hint="Last Name"
+                                android:textCursorDrawable="@null"
+                                android:textSize="12dp"
+                                android:textColorHint="#BFBCBC"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_light"
+                            android:gravity="center_horizontal"
+                            android:text="Your username and password should\nbe unique to yourself, please do not\nshare your details with other people/\nwebsites for security reasons"
+                            android:textSize="12dp"
+                            android:textColor="#000000"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/Theme.AppCompat.Light"
+                            style="@style/MyTextInputLayout"
+                            app:hintEnabled="false"
+                            android:layout_marginTop="20dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/signup_uname"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:background="@drawable/btn_back2"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textColor="#ffffff"
+                                android:gravity="center"
+                                android:inputType="textPersonName"
+                                android:hint="Username"
+                                android:textCursorDrawable="@null"
+                                android:textSize="12dp"
+                                android:textColorHint="#BFBCBC"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/Theme.AppCompat.Light"
+                            style="@style/MyTextInputLayout"
+                            app:hintEnabled="false"
+                            app:passwordToggleEnabled="true"
+                            android:layout_marginTop="20dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/signup_pass"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:background="@drawable/btn_back2"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textColor="#ffffff"
+                                android:gravity="center"
+                                android:inputType="textPassword"
+                                android:drawableStart="@drawable/ic_password_space"
+                                android:hint="Password"
+                                android:textCursorDrawable="@null"
+                                android:textSize="12dp"
+                                android:textColorHint="#BFBCBC"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/Theme.AppCompat.Light"
+                            style="@style/MyTextInputLayout"
+                            app:hintEnabled="false"
+                            app:passwordToggleEnabled="true"
+                            android:layout_marginTop="20dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/signup_cpass"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:background="@drawable/btn_back2"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textColor="#ffffff"
+                                android:gravity="center"
+                                android:inputType="textPassword"
+                                android:drawableStart="@drawable/ic_password_space"
+                                android:hint="Confirm Password"
+                                android:textCursorDrawable="@null"
+                                android:textSize="12dp"
+                                android:textColorHint="#BFBCBC"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_light"
+                            android:gravity="center_horizontal"
+                            android:text="A mail would be sent to you to verify if\nthis mail truly belongs to you, this may\ntake up to 1 minute"
+                            android:textSize="12dp"
+                            android:textColor="#000000"/>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/Theme.AppCompat.Light"
+                            style="@style/MyTextInputLayout"
+                            app:hintEnabled="false"
+                            android:layout_marginTop="20dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/signup_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:background="@drawable/btn_back2"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textColor="#ffffff"
+                                android:gravity="center"
+                                android:inputType="textEmailAddress"
+                                android:hint="Email"
+                                android:textCursorDrawable="@null"
+                                android:textSize="12dp"
+                                android:textColorHint="#BFBCBC"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_light"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            android:drawableLeft="@drawable/news_letter_ic"
+                            android:drawablePadding="10dp"
+                            android:text="Subscribe to Newsletters"
+                            android:textSize="12dp"
+                            android:textColor="#000000"/>
+
+                        <ProgressBar
+                            android:id="@+id/signup_pbar"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="20dp"
+                            android:visibility="gone"
+                            android:layout_gravity="center_horizontal"
+                            android:theme="@style/pbar_theme" />
+                    </LinearLayout>
+                </ViewFlipper>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:weightSum="2"
+                    android:layout_marginHorizontal="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/prev_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:visibility="invisible"
+                        android:layout_weight="2"
+                        android:text="Previous"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/poppins_semibold"/>
+
+                    <Button
+                        android:id="@+id/next_btn"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/btn_back2"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Next"
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

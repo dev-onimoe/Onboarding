@@ -89,9 +89,11 @@ public class Walkthrough_Adapter extends PagerAdapter {
             public void onClick(View v) {
                 if(walkthrough_Activity.viewPager.getCurrentItem()!=2){
                     walkthrough_Activity.viewPager.setCurrentItem(walkthrough_Activity.viewPager.getCurrentItem()+1);
+
                 }else{
                     Intent intent = new Intent(context, Welcome_Activity.class);
                     context.startActivity(intent);
+                    ((Activity) context).finish();
                 }
 
             }
@@ -122,7 +124,7 @@ public class Walkthrough_Adapter extends PagerAdapter {
 
             dot_layout.addView(mdots[i]);
         }
-        mdots[0].setTextColor(context.getResources().getColor(R.color.white));
+        //mdots[0].setTextColor(context.getResources().getColor(R.color.white));
 
 
     }
@@ -138,7 +140,7 @@ public class Walkthrough_Adapter extends PagerAdapter {
 
             if(position==0){
 
-                mdots[0].setTextColor(context.getResources().getColor(R.color.dgrey2));
+                //mdots[0].setTextColor(context.getResources().getColor(R.color.dgrey2));
                 mdots[position].setTextColor(context.getResources().getColor(R.color.white));
 
             }
